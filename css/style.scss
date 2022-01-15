@@ -1,0 +1,77 @@
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Merienda', cursive;
+}
+
+
+/*************************************** Navigation ***************************************/
+
+nav {
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.nav-img-logo {
+    height: 50px;
+    margin-left: 5%;
+    padding-top: 0;
+}
+
+.nav-logo {
+    padding: 16px;
+}
+
+.nav-menu {
+    margin-right: 5%;
+}
+
+.nav-ul {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.nav-ul li {
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav-ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/*************************************** Welcome ***************************************/
+
+#welcome {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+}
+
+.carousel-caption {
+    margin-bottom: 30%;
+    text-shadow: 1px 1px gray;
+}
