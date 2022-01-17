@@ -1,8 +1,11 @@
+/***************************************   Body   ***************************************/
+
 html,
 body {
     min-height: 100vh;
     width: 100%;
     font-family: 'Merienda', cursive;
+    position: relative;
 }
 
 
@@ -45,6 +48,25 @@ nav {
 }
 
 
+/* Scrollspy Background Color*/
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+/*************************************** Sections ***************************************/
+
+#restaurant,
+#menu,
+#reservation {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
 /*************************************** Welcome ***************************************/
 
 #welcome {
@@ -78,53 +100,21 @@ nav {
 }
 
 
-/*************************************** Restaurant ***************************************/
-
-#restaurant {
-    min-height: 100vh;
-    width: 100%;
-}
-
-
-/***************************************    Menu    ***************************************/
-
-#menu {
-    min-height: 100vh;
-    width: 100%;
-}
-
-
 /***************************************  Reservation  ***************************************/
 
-#reservation {
-    min-height: 100vh;
-    width: 100%;
-}
-
 .reserve-container {
-    display: flex;
-    align-items: center;
     text-shadow: 2px 2px gray;
 }
 
 .reservation-img {
-    position: relative;
-}
-
-.reservation-time {
-    position: absolute;
-    right: 0;
-}
-
-
-/***************************************   Location   ***************************************/
-
-#location {
-    width: 100%;
-}
-
-.map-container {
-    width: 100%;
+    background-image: url('/img/reservation.jpg');
+    height: 720px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

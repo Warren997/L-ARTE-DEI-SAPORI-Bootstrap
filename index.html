@@ -27,10 +27,10 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navmenu" data-offset="0">
 
     <!-- Nav -->
-    <nav class="navbar navbar-light navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Nav Brand-->
             <img class="nav-img-logo" src="img/logo.svg" alt="Logo">
@@ -41,21 +41,21 @@
             </button>
             <!-- Nav Collapse-->
             <div class="nav-menu collapse navbar-collapse text-center" id="navmenu">
-                <ul class="nav-ul navbar-nav ms-auto">
+                <ul class="nav-ul navbar-nav ms-auto nav-pills">
                     <li class="nav-item">
-                        <a href="#welcome" class="welcome">Welcome</a>
+                        <a href="#welcome" class="nav-link">Welcome</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#restaurant">Restaurant</a>
+                        <a href="#restaurant" class="nav-link">Restaurant</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#menu">Menu</a>
+                        <a href="#menu" class="nav-link">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#reservation">Reservation</a>
+                        <a href="#reservation" class="nav-link">Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#location">Our Location</a>
+                        <a href="#location" class="nav-link">Our Location</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@
 
 
     <!-- Welcome -->
-    <section id="welcome">
+    <section id="welcome" class="mt-5">
         <div id="carouselExampleIndicators" class=" carousel-container carousel slide " data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -220,22 +220,22 @@
             <h2 class="text-center p-5">- Reservation -</h2>
             <!-- Reservation Time -->
             <div class="reserve-container row text-light" data-aos="fade-up" data-aos-duration="1000">
-                <img class="img-fluid reservation-img" src="img/reservation.jpg" alt="Reservation Image">
-                <!-- Reservation Time Text-->
-                <div class="reservation-time">
-                    <div class="row ">
-                        <div class="col">
-                            <h1 class=" text-center">Timetables</h1>
+                <div class="bg-image container reservation-img">
+                    <div class="reservation-time w-100">
+                        <div class="row ">
+                            <div class="col">
+                                <h1 class=" text-center">Timetables</h1>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <h2 class="text-center">Lunch</h2>
-                            <h5 class="text-center">12:00 - 15:00</h5>
-                        </div>
-                        <div class="col-6">
-                            <h2 class="text-center">Dinner</h2>
-                            <h5 class="text-center">19:30 - 23:30</h5>
+                        <div class="row mt-5">
+                            <div class="col-6 ">
+                                <h2 class="text-center">Lunch</h2>
+                                <h5 class="text-center">12:00 - 15:00</h5>
+                            </div>
+                            <div class="col-6">
+                                <h2 class="text-center">Dinner</h2>
+                                <h5 class="text-center">19:30 - 23:30</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -291,7 +291,7 @@
 
 
     <!-- Location -->
-    <section id="location">
+    <section id="location" class="w-100">
         <div class="container pb-4">
             <!-- Header -->
             <h2 class="text-center p-5">- Location -</h2>
@@ -332,16 +332,6 @@
     </footer>
 
 
-
-
-
-
-
-
-
-
-
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -349,6 +339,18 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+
+
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navmenu'
+        })
+
+
+        var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
+        dataSpyList.forEach(function(dataSpyEl) {
+            bootstrap.ScrollSpy.getInstance(dataSpyEl)
+                .refresh()
+        })
     </script>
 
 </body>

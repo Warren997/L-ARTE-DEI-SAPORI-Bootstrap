@@ -1,8 +1,10 @@
+/***************************************   Body   ***************************************/
 html,
 body {
   min-height: 100vh;
   width: 100%;
   font-family: 'Merienda', cursive;
+  position: relative;
 }
 
 /*************************************** Navigation ***************************************/
@@ -44,6 +46,21 @@ nav {
   text-decoration: none;
 }
 
+/* Scrollspy Background Color*/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*************************************** Sections ***************************************/
+#restaurant,
+#menu,
+#reservation {
+  min-height: 100vh;
+  width: 100%;
+}
+
 /*************************************** Welcome ***************************************/
 #welcome {
   width: 100%;
@@ -75,50 +92,26 @@ nav {
   margin-bottom: 5%;
 }
 
-/*************************************** Restaurant ***************************************/
-#restaurant {
-  min-height: 100vh;
-  width: 100%;
-}
-
-/***************************************    Menu    ***************************************/
-#menu {
-  min-height: 100vh;
-  width: 100%;
-}
-
 /***************************************  Reservation  ***************************************/
-#reservation {
-  min-height: 100vh;
-  width: 100%;
+.reserve-container {
+  text-shadow: 2px 2px gray;
 }
 
-.reserve-container {
+.reservation-img {
+  background-image: url("/img/reservation.jpg");
+  height: 720px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-shadow: 2px 2px gray;
-}
-
-.reservation-img {
-  position: relative;
-}
-
-.reservation-time {
-  position: absolute;
-  right: 0;
-}
-
-/***************************************   Location   ***************************************/
-#location {
-  width: 100%;
-}
-
-.map-container {
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*************************************** Media Query ***************************************/
