@@ -3,4 +3,4 @@
 This is my first website that I uses SCSS and Scrollspy
 To open this website please download this repo and open the index file and enjoy
 
-![](thumbnail/thumbnail.png)
+![](thumbnail/thumbnail-desktop.png)
